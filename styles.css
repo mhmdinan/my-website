@@ -43,16 +43,12 @@ h3 {
   line-height: 1;
 }
 
-.social-links a:hover {
-  transform: translateY(-5px);
-}
-
-.social-links a[href*="github"]:hover {
+.github_logo:hover {
   color: #fff;
 }
 
-.social-links a[href*="x.com"]:hover {
-  color: #fff;
+.x_logo:hover {
+  color: #ffffff;
 }
 
 .social-links a[href*="linkedin"]:hover {
@@ -60,52 +56,6 @@ h3 {
 }
 
 .social-links a:hover {
-  filter: drop-shadow(0 0 8px currentColor);
+  filter: drop-shadow(0 0 10px currentColor);
   transform: translateY(-5px);
-}
-
-#portfolio {
-  padding: 2rem;
-}
-
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: #111;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-card h3 {
-  margin: 0.5rem 1rem 0;
-  color: #fff;
-}
-
-.project-card p {
-  margin: 0.5rem 1rem 1rem;
-  color: #ccc;
-}
-
-.project-card a.project-link {
-  display: block;
-  margin: 0 1rem 1rem;
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
