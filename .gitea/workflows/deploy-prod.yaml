@@ -1,18 +1,18 @@
-# name: Deploy Production
-# on:
-#   push:
-#     branches: [main]
+name: Deploy Production
+on:
+  push:
+    branches: [main]
 
-# jobs:
-  # deploy:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #     - name: Sync to Public Server
-  #       uses: easingthemes/ssh-deploy@main
-  #       with:
-  #         SSH_PRIVATE_KEY: ${{ secrets.PROD_SSH_KEY }}
-  #         REMOTE_HOST: ${{ secrets.PROD_HOST }}
-  #         REMOTE_USER: ${{ secrets.PROD_USER }}
-  #         SOURCE: "public/"
-  #         TARGET: "/var/www/production-site/"
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync to Home Lab
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.PROD_SSH_KEY }}
+          REMOTE_HOST: ${{ vars.PROD_HOST }}
+          REMOTE_USER: ${{ vars.PROD_USER }}
+          SOURCE: "src/"
+          TARGET: ${{ vars.PROD_SITE_PATH }}

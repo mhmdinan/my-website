@@ -1,28 +1,177 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
     <title>MhmdInan</title>
-</head>
+  </head>
 
-<body>
-    <h1>MhmdInan</h1>
-    <h3>Socials:</h3>
-    <ul class="social-links">
-        <li>
-            <a href="https://github.com/MhmdInan" target="_blank" rel="noopener noreferer" aria-label="GitHub" class="github_logo">
-                <img src="/assets/github.svg" alt="GitHub" width="32" height="32"></a>
-        </li>
-        <li>
-            <a href="https://x.com/mhmadinan" target="_blank" rel="noopener noreferer" aria-label="X" class="x_logo">
-                <img src="/assets/x.svg" alt="GitHub" width="32" height="32"></a>
-        </li>
-    </ul>
-        
-</body>
-</body>
+  <body>
+    <div class="container">
+      <header class="sidebar">
+        <div>
+          <h1>Muhammad Inan Imran</h1>
+          <h2>Software Engineer</h2>
+          <p>Interested in Backend Development</p>
+          <p>and Scalable System Design</p>
+          <nav>
+            <ul>
+              <li>
+                <a href="#about"><span>-</span>ABOUT</a>
+              </li>
+              <li>
+                <a href="#experience"><span>-</span>EXPERIENCE</a>
+              </li>
+              <li>
+                <a href="#projects"><span>-</span>PROJECTS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
+        <div class="socials">
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://github.com/MhmdInan"
+                target="_blank"
+                rel="noopener noreferer"
+                aria-label="GitHub"
+                class="github_logo"
+              >
+                <img
+                  src="./assets/github.svg"
+                  alt="GitHub"
+                  width="32"
+                  height="32"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/mhmadinan"
+                target="_blank"
+                rel="noopener noreferer"
+                aria-label="X"
+                class="x_logo"
+              >
+                <img src="./assets/x.svg" alt="GitHub" width="32" height="32"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="about">
+          <h3>About</h3>
+          <p>
+            I am a Software Engineer based in Pakistan with a background in
+            Electrical Engineering. My transition from hardware to software was
+            driven by a fascination with how code can orchestrate complex
+            physical systems, a journey that started with Arduino
+            micro-controllers and led me deep into the world of System Design
+            and backend architecture.
+          </p>
+          <p>
+            My journey started with hobbyist projects around embedded systems
+            which allowed me to develop programs in low-level environments.
+            Today, I am focusing my learning on building high-performance APIs
+            and microservices.
+          </p>
+          <p>
+            I started my own homelab using old office PCs and a cloud VPS
+            developing my skills in linux systems and docker deployments.
+          </p>
+          <p>Here are a few technologies I’ve been working with recently:</p>
+          <ul class="skills-list">
+            <li>FastAPI</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Git workflows</li>
+            <li>CI/CD Pipelines</li>
+            <li>Arduino / Embedded C</li>
+          </ul>
+        </section>
+        <section id="experience">
+          <h3>Experience</h3>
+          <div class="experience-card-multiple">
+            <a
+              href="https://www.softmatics.com/"
+              target="_blank"
+              class="experience-card"
+            >
+              <header class="date">2024-2025</header>
+              <div>
+                <h4>Software Engineer . Softmatics</h4>
+                <p>
+                  Architected an end-to-end IoT monitoring system to identify
+                  and record machine downtime, enabling data-driven strategies
+                  to minimize failure points and maximize operational
+                  efficiency.
+                </p>
+                <p>
+                  Developed and deployed custom ESP32-based hardware equipped
+                  with current sensors as client devices with WiFi capability
+                  and integrated them with FastAPI backend utilizing REST APIs
+                  to securely log and manage sensor data on internal company
+                  servers.
+                </p>
+                <p>
+                  Hardened internal communication by implementing HTTPS
+                  encryption between ESP32 nodes and a FastAPI/Nginx backend
+                  within an air-gapped network. Engineered a custom networking
+                  solution by modifying the ESP HTTPClient library to support
+                  Host Headers without DNS, ensuring secure TLS handshakes using
+                  static IP addressing.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+        <section id="projects">
+          <h3>Projects</h3>
+          <div class="card">
+            <div class="project-card-info">
+              <a
+              href="https://github.com/mhmdinan/erp-FASTAPI_REACT"
+              target="_blank"
+              >
+                <h4>ERP System</h4>
+                <p>
+                  WIP: ERP system from scratch to learn full stach development.
+                </p>
+                <div class="tags"><span>FastAPI</span> <span>React</span></div>
+              </a>
+            </div>
+            <div class="project-card-info">
+              <a
+              href="https://github.com/mhmdinan/final_year_project"
+              target="_blank"
+              >
+                <h4>Dimensionality Reduction for Big Data in Power Systems</h4>
+                <p>research project</p>
+                <div class="tags"><span>PyTorch</span> <span>Numpy</span></div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <footer class="main-footer">
+          <p>
+            Coded in
+            <a href="https://code.visualstudio.com/" target="_blank"
+              >Visual Studio Code</a
+            >. Built with <strong>HTML & CSS</strong>.
+          </p>
+          <p>
+            Heavily Inspired by
+            <a href="https://brittanychiang.com" target="_blank"
+              >Brittany Chiang</a
+            >. Do check out her site!
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>
