@@ -45,8 +45,9 @@ body {
   padding: 100px 0;
 }
 
-.sidebar h1 { color: #fff; font-size: 3rem;}
-.sidebar h2 { color: #fff; font-size: 1rem;}
+.sidebar h1 { color: #fff; font-size: 3rem; margin-bottom: 10px;}
+.sidebar h2 { color: #fff; font-size: 1rem; margin-bottom: 10px;}
+.sidebar p {margin-bottom: 5px;}
 
 nav ul {list-style: none; margin-top: 50px;}
 nav li {margin-bottom: 15px;}
@@ -82,21 +83,32 @@ h3 {
   border-radius: 4px;
   transition: 0.3s;
   cursor: pointer;
+  margin-bottom: 40px;
+}
+
+
+.card p{color: #fff;}
+.card h4 { color: #ffffff;}
+
+.project-card-info {
   margin-bottom: 20px;
 }
 
-.card:hover {
-  background-color: #080b19;
-  /* transform: translateY(-5px); */
-  border: 2px;
-  border-radius: 5px;
+.project-card-info a {
+  text-decoration: none;
 }
 
-.card h4 { color: #3a58e1;}
+.project-card-info:hover {
+  background-color: #080b19;
+  transform: translateY(-5px);
+  border: 50px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
 
 .tags span {
   font-size: 12px;
-  color: #3a58e1;
+  color: #ffffff;
   background: #1a203e;
   padding: 4px 10px;
   border-radius: 12px;
@@ -165,7 +177,7 @@ h3 {
     margin-bottom: 10px;
     font-family: 'Fira Code', monospace; /* Monospace looks "techy" */
     font-size: 0.9rem;
-    color: var(--light-slate);
+    color: #fff;
 }
 
 /* The small blue arrow/bullet */
@@ -188,7 +200,74 @@ h3 {
   margin-bottom: 0;    /* Prevents extra space at the bottom of the section */
 }
 
-#experience p {
-  margin-bottom: 5px; /* Adjust this value (20px to 30px is usually the sweet spot) */
-  line-height: 1; 
+.experience-card {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    text-decoration: none; /* Removes underline from links */
+    color: inherit;       /* Inherits text color */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
+
+/* THE HOVER HIGHLIGHT */
+.experience-card:hover {
+    background-color: #060b2b; /* Very subtle teal tint */
+    transform: translateY(-5px);
+}
+
+.experience-date {
+  flex-shrink: 0;
+    width: 120px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--slate);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 5px;
+}
+
+/* RIGHT COLUMN (CONTENT) */
+.experience-content {
+    width: 75%;
+}
+
+.experience-content h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+/* Title turns teal when card is hovered */
+.experience-card:hover h4 {
+    color: var(--teal);
+}
+
+#experience p {
+    font-size: 0.95rem;
+    line-height: 1.6; /* Good space between lines */
+    margin-top: 15px;
+    color: var(--light-slate);
+}
+
+/* TECHNOLOGY TAGS */
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    margin-top: 15px;
+    padding: 0;
+}
+
+.experience-tags li {
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--teal);
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-family: 'Fira Code', monospace;
+}
+
