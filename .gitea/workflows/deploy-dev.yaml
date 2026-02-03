@@ -15,4 +15,4 @@ jobs:
           REMOTE_HOST: ${{ var.DEV_HOST }}
           REMOTE_USER: ${{ var.DEV_USER }}
           SOURCE: "src/"
-          TARGET: "{{ var.DEV_SITE_PATH }}
+          TARGET: {{ var.DEV_SITE_PATH }}
