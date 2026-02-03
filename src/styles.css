@@ -1,7 +1,7 @@
 :root {
   --navy: #0a192f;
   --light-slate: #a8b2d1;
-  --teal: #64ffda;
+  --blue: #3a58e1;
   --white: #e6f1ff;
   --bg-tint: rgba(100, 255, 218, 0.1);
 }
@@ -58,7 +58,7 @@ nav a {
   letter-spacing: 2px;
   transition: 0.3s;
 }
-nav a:hover {color: #64ffda; padding-left: 10px;}
+nav a:hover {color: #3a58e1; padding-left: 10px;}
 
 .content {
   width: 55%;
@@ -86,18 +86,18 @@ h3 {
 }
 
 .card:hover {
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: #080b19;
   /* transform: translateY(-5px); */
   border: 2px;
   border-radius: 5px;
 }
 
-.card h4 { color: #64ffda;}
+.card h4 { color: #3a58e1;}
 
 .tags span {
   font-size: 12px;
-  color: #64ffda;
-  background: rgba(100, 255, 218, 0.1);
+  color: #3a58e1;
+  background: #1a203e;
   padding: 4px 10px;
   border-radius: 12px;
   margin-right: 5px;
@@ -144,7 +144,7 @@ h3 {
 }
 
 .main-footer a:hover {
-  color: var(--teal);     /* The signature glow color on hover */
+  color: var(--blue);     /* The signature glow color on hover */
 }
 
 .main-footer strong {
@@ -168,12 +168,13 @@ h3 {
     color: var(--light-slate);
 }
 
-/* The small teal arrow/bullet */
+/* The small blue arrow/bullet */
 .skills-list li::before {
-    content: "▹";
+    content: ">";
     position: absolute;
     left: 0;
-    color: var(--teal);
+    top: 2px;
+    color: var(--blue);
     font-size: 14px;
     line-height: 12px;
 }
@@ -185,4 +186,9 @@ h3 {
 
 #about p:last-child {
   margin-bottom: 0;    /* Prevents extra space at the bottom of the section */
+}
+
+#experience p {
+  margin-bottom: 5px; /* Adjust this value (20px to 30px is usually the sweet spot) */
+  line-height: 1; 
 }
