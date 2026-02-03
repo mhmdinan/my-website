@@ -14,5 +14,5 @@
   #         SSH_PRIVATE_KEY: ${{ secrets.PROD_SSH_KEY }}
   #         REMOTE_HOST: ${{ secrets.PROD_HOST }}
   #         REMOTE_USER: ${{ secrets.PROD_USER }}
-  #         SOURCE: "public/"
-  #         TARGET: "/var/www/production-site/"
+  #         SOURCE:
+  #         TARGET:

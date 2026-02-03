@@ -1,28 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="styles.css" />
     <title>MhmdInan</title>
-</head>
+  </head>
 
-<body>
-    <h1>MhmdInan</h1>
-    <h3>Socials:</h3>
-    <ul class="social-links">
-        <li>
-            <a href="https://github.com/MhmdInan" target="_blank" rel="noopener noreferer" aria-label="GitHub" class="github_logo">
-                <img src="/assets/github.svg" alt="GitHub" width="32" height="32"></a>
-        </li>
-        <li>
-            <a href="https://x.com/mhmadinan" target="_blank" rel="noopener noreferer" aria-label="X" class="x_logo">
-                <img src="/assets/x.svg" alt="GitHub" width="32" height="32"></a>
-        </li>
-    </ul>
-        
-</body>
-</body>
+  <body>
+    <div class="container">
+      <header class="sidebar">
+        <div>
+          <h1>Muhammad Inan Imran</h1>
+          <h2>Software Engineer</h2>
+          <p>Interested in Backend Development, System Design.</p>
+          <nav>
+            <ul>
+              <li>
+                <a href="#about"><span>-</span>ABOUT</a>
+              </li>
+              <li>
+                <a href="#experience"><span>-</span>EXPERIENCE</a>
+              </li>
+              <li>
+                <a href="#projects"><span>-</span>PROJECTS</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
+        <div class="socials">
+          <ul class="social-links">
+            <li>
+              <a
+                href="https://github.com/MhmdInan"
+                target="_blank"
+                rel="noopener noreferer"
+                aria-label="GitHub"
+                class="github_logo"
+              >
+                <img
+                  src="./assets/github.svg"
+                  alt="GitHub"
+                  width="32"
+                  height="32"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://x.com/mhmadinan"
+                target="_blank"
+                rel="noopener noreferer"
+                aria-label="X"
+                class="x_logo"
+              >
+                <img src="./assets/x.svg" alt="GitHub" width="32" height="32"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="content">
+        <section id="about">
+          <h3>About</h3>
+          <p>
+            I'm a software engineer based in Pakistan who finds joy in the
+            invisible architecture of the web. My passion lies in
+            <strong>Backend Development</strong> and
+            <strong>System Design</strong> building the robust, scalable
+            foundations that power modern applications.
+          </p>
+          <p>
+            My journey is a bit unique: I’ve spent time in professional
+            environments working with
+            <strong>Arduino</strong> and embedded systems, which gave me a deep
+            appreciation for efficient, low-level performance. Today, I
+            translate that precision into building high-performance APIs and
+            microservices.
+          </p>
+          <p>
+            I’m happiest when I'm orchestrating containers, streamlining
+            deployment pipelines, or diving deep into a Linux terminal.
+          </p>
+          <p>Here are a few technologies I’ve been working with recently:</p>
+          <ul class="skills-list">
+            <li>FastAPI</li>
+            <li>Docker</li>
+            <li>Linux</li>
+            <li>Git & GitHub</li>
+            <li>CI/CD Pipelines</li>
+            <li>Arduino / Embedded C</li>
+          </ul>
+        </section>
+        <section id="experience">
+          <h3>Experience</h3>
+          <div class="card">
+            <span class="date">2024-2025</span>
+            <div class="card-info">
+              <h4>Software Engineer . Softmatics</h4>
+              <ul class="softmatics-experience">
+                <li>
+                  <strong>Architected an end-to-end IoT monitoring system</strong> to identify
+                  and record machine downtime, enabling data-driven strategies
+                  to minimize failure points and maximize operational
+                  efficiency.
+                </li>
+                <li>
+                  <strong>Developed and deployed custom ESP32-based hardware</strong> equipped
+                  with current sensors and WiFi capability to capture and
+                  transmit real-time machine activity data from industrial
+                  machines.
+                </li>
+                <li>
+                  <strong>Integrated hardware with a high-performance FastAPI backend</strong>,
+                  utilizing REST APIs to securely log and manage sensor data on
+                  internal company servers.
+                </li>
+                <li>
+                  <strong>Hardened internal communication by implementing HTTPS
+                  encryption</strong> between ESP32 nodes and a FastAPI/Nginx backend
+                  within an air-gapped network.
+                </li>
+                <li>
+                  <strong>Engineered a custom networking solution</strong> by modifying the
+                  HTTPClient library to support Host Headers without DNS,
+                  ensuring secure TLS handshakes using static IP addressing.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="projects">
+          <h3>Projects</h3>
+          <div class="card">
+            <div class="card-info">
+              <h4>Build a site like this</h4>
+              <p>Pure HTML / CSS implementation of portfolio</p>
+              <div class="tags"><span>HTML</span> <span>CSS</span></div>
+            </div>
+          </div>
+        </section>
+        <footer class="main-footer">
+          <p>
+            Loosely designed in
+            <a href="https://www.figma.com/" target="_blank">Figma</a> and coded
+            in
+            <a href="https://code.visualstudio.com/" target="_blank"
+              >Visual Studio Code</a
+            >. Built with <strong>HTML & CSS</strong>.
+          </p>
+          <p>
+            Heavily Inspired by
+            <a href="https://brittanychiang.com" target="_blank"
+              >Brittany Chiang</a
+            >. Do check out her site.
+          </p>
+        </footer>
+      </main>
+    </div>
+  </body>
 </html>

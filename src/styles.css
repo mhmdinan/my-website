@@ -1,61 +1,188 @@
+:root {
+  --navy: #0a192f;
+  --light-slate: #a8b2d1;
+  --teal: #64ffda;
+  --white: #e6f1ff;
+  --bg-tint: rgba(100, 255, 218, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #000;
   /* pure black */
   color: #fff;
   /* white text */
   font-family: Arial, sans-serif;
-  text-align: center;
+/*   text-align: center;
   padding: 2rem;
-  margin: 0;
+  margin: 0; */
 }
 
-h1 {
-  color: white;
-  text-align: center;
-  padding: 10%;
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.sidebar {
+  width: 45%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.sidebar h1 { color: #fff; font-size: 3rem;}
+.sidebar h2 { color: #fff; font-size: 1rem;}
+
+nav ul {list-style: none; margin-top: 50px;}
+nav li {margin-bottom: 15px;}
+nav a {
+  text-decoration: none;
+  color: #a8b2d1;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+nav a:hover {color: #64ffda; padding-left: 10px;}
+
+.content {
+  width: 55%;
+  padding: 100px 0;
+}
+
+section {
+  margin-bottom: 120px;
 }
 
 h3 {
-  color: white;
-  text-align: center;
-  padding: 0%;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.card:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  /* transform: translateY(-5px); */
+  border: 2px;
+  border-radius: 5px;
+}
+
+.card h4 { color: #64ffda;}
+
+.tags span {
+  font-size: 12px;
+  color: #64ffda;
+  background: rgba(100, 255, 218, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-right: 5px;
 }
 
 .social-links {
-  list-style: none;
   display: flex;
-  gap: 1.8rem;
+  list-style: none;
   padding: 0;
-  margin: 2rem 0;
-  justify-content: center;
-}
-
-.social-links a {
-  display: inline-block;
-  padding: 12px;
-  color: #e0e0e0;
-  font-size: 2rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 1;
-  border-radius: 50%;
-  line-height: 1;
+  margin: 0;
+  gap: 20px;
+  align-items: center;
 }
 
 .github_logo:hover {
-  color: #fff;
+  filter: drop-shadow(0 0 20px currentColor);
+  transform: translateY(-5px);
+  color: #0a66c2;
 }
 
 .x_logo:hover {
+  filter: drop-shadow(0 0 10px currentColor);
+  transform: translateY(-5px);
   color: #ffffff;
 }
 
-.social-links a[href*="linkedin"]:hover {
-  color: #0A66C2;
+.main-footer {
+  padding: 80px 0 20px 0; /* Plenty of space above, a bit below */
+  max-width: 400px;       /* Keeps the text from stretching too wide */
+  font-size: 0.85rem;     /* Subtle, small text */
+  color: var(--light-slate);
+  line-height: 1.5;
 }
 
-.social-links a:hover {
-  filter: drop-shadow(0 0 10px currentColor);
-  transform: translateY(-5px);
+.main-footer p {
+  margin-bottom: 10px;
+}
+
+.main-footer a {
+  color: var(--white);    /* Highlighted links */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-footer a:hover {
+  color: var(--teal);     /* The signature glow color on hover */
+}
+
+.main-footer strong {
+  color: var(--white);    /* Makes the tech stack stand out slightly */
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+.skills-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-family: 'Fira Code', monospace; /* Monospace looks "techy" */
+    font-size: 0.9rem;
+    color: var(--light-slate);
+}
+
+/* The small teal arrow/bullet */
+.skills-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--teal);
+    font-size: 14px;
+    line-height: 12px;
+}
+
+#about p {
+  margin-bottom: 25px; /* Adjust this value (20px to 30px is usually the sweet spot) */
+  line-height: 1.7;    /* Slightly increasing line-height also helps readability */
+}
+
+#about p:last-child {
+  margin-bottom: 0;    /* Prevents extra space at the bottom of the section */
 }
