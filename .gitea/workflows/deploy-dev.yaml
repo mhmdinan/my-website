@@ -1,0 +1,23 @@
+name: Deploy Development
+on:
+  push:
+    branches: [dev]
+
+env:
+  REMOTE_HOST: "192.168.18.254"
+  REMOTE_PATH: "/var/www/production-site"
+  DEV_USER: "muhammadinan"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync to Home Lab
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.DEV_SSH_KEY }}
+          REMOTE_HOST: ${{ env.REMOTE_HOST }}
+          REMOTE_USER: ${{ env.DEV_USER }}
+          SOURCE: "src/"
+          TARGET: "/home/muhammadinan/docker/nginx/sites/mhmdinan"
