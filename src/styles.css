@@ -271,3 +271,21 @@ h3 {
     font-family: 'Fira Code', monospace;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column; 
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 60px 0 20px 0;
+  }
+
+  .content {
+    width: 100%;
+    padding: 40px 0;
+  }
+}
