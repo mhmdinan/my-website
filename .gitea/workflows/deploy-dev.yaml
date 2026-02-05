@@ -6,7 +6,12 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    container:
+      image: alpine:latest
     steps:
+      - name: Install rsync
+        run: apk add --no-cache rsync
+      - name: Sync code to container
       - uses: actions/checkout@v4
       - name: Sync to Home Lab
         uses: easingthemes/ssh-deploy@main
