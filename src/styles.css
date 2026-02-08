@@ -137,9 +137,9 @@ h3 {
 }
 
 .main-footer {
-  padding: 80px 0 20px 0; /* Plenty of space above, a bit below */
-  max-width: 400px;       /* Keeps the text from stretching too wide */
-  font-size: 0.85rem;     /* Subtle, small text */
+  padding: 80px 0 20px 0;
+  max-width: 400px;
+  font-size: 0.85rem;
   color: var(--light-slate);
   line-height: 1.5;
 }
@@ -149,18 +149,18 @@ h3 {
 }
 
 .main-footer a {
-  color: var(--white);    /* Highlighted links */
+  color: var(--white);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .main-footer a:hover {
-  color: var(--blue);     /* The signature glow color on hover */
+  color: var(--blue);
 }
 
 .main-footer strong {
-  color: var(--white);    /* Makes the tech stack stand out slightly */
+  color: var(--white);
 }
 
 .skills-list {
@@ -175,12 +175,11 @@ h3 {
     position: relative;
     padding-left: 20px;
     margin-bottom: 10px;
-    font-family: 'Fira Code', monospace; /* Monospace looks "techy" */
+    font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
     color: #fff;
 }
 
-/* The small blue arrow/bullet */
 .skills-list li::before {
     content: ">";
     position: absolute;
@@ -192,28 +191,27 @@ h3 {
 }
 
 #about p {
-  margin-bottom: 25px; /* Adjust this value (20px to 30px is usually the sweet spot) */
-  line-height: 1.7;    /* Slightly increasing line-height also helps readability */
+  margin-bottom: 25px;
+  line-height: 1.7;
 }
 
 #about p:last-child {
-  margin-bottom: 0;    /* Prevents extra space at the bottom of the section */
+  margin-bottom: 0;
 }
 
 .experience-card {
     display: flex;
     gap: 20px;
     padding: 25px;
-    text-decoration: none; /* Removes underline from links */
-    color: inherit;       /* Inherits text color */
+    text-decoration: none;
+    color: inherit;
     border-radius: 8px;
     transition: all 0.3s ease;
     margin-bottom: 30px;
 }
 
-/* THE HOVER HIGHLIGHT */
 .experience-card:hover {
-    background-color: #060b2b; /* Very subtle teal tint */
+    background-color: #060b2b;
     transform: translateY(-5px);
 }
 
@@ -228,7 +226,6 @@ h3 {
     padding-top: 5px;
 }
 
-/* RIGHT COLUMN (CONTENT) */
 .experience-content {
     width: 75%;
 }
@@ -240,19 +237,17 @@ h3 {
     transition: color 0.3s ease;
 }
 
-/* Title turns teal when card is hovered */
 .experience-card:hover h4 {
     color: var(--teal);
 }
 
 #experience p {
     font-size: 0.95rem;
-    line-height: 1.6; /* Good space between lines */
+    line-height: 1.6;
     margin-top: 15px;
     color: var(--light-slate);
 }
 
-/* TECHNOLOGY TAGS */
 .experience-tags {
     display: flex;
     flex-wrap: wrap;
@@ -287,5 +282,22 @@ h3 {
   .content {
     width: 100%;
     padding: 40px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-card {
+    flex-direction: column; /* Stacks date above content */
+    gap: 8px;              /* Tighten the gap */
+    padding: 15px;
+  }
+
+  .experience-date {
+    width: 100%;           /* Date takes full width */
+    margin-bottom: 5px;
+  }
+
+  .experience-content {
+    width: 100%;           /* Content takes full width */
   }
 }
